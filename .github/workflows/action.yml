@@ -1,8 +1,11 @@
 on: push
 jobs: 
-  first-job:
+  linting:
+    name: linting
     runs-on: ubuntu-latest
     steps:
+      - run: ls *
+      - run: cat *.py
       - run: pip3 install flake8
       - run: flake8 --version
-      
+
