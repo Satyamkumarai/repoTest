@@ -1,0 +1,8 @@
+on: push
+jobs: 
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip3 install flake8
+      - run: flake8 --version
+      
