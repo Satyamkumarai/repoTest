@@ -4,7 +4,8 @@ jobs:
     name: linting
     runs-on: ubuntu-latest
     steps:
-      - run: ls *
+      - uses: actions/checkout@v2
+      - run: ls -l
       - run: cat *.py
       - run: pip3 install flake8
       - run: flake8 --version
